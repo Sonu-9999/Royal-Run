@@ -9,7 +9,7 @@ public class chunk : MonoBehaviour
     [SerializeField] float applespawnchance = 0.3f;
     [SerializeField] float coinsapwnchance = 0.5f;
 
-    float[] fencelanes = { -2f, 1f, 3.7f };
+    float[] fencelanes = { -1.8f, 1f, 3.7f };
     List<int> availablelanes = new List<int> { 0, 1, 2 };
     float[] pickuplanes = { -3.0f, -0.1f, 2.7f };
     float spawnspace = 2f;
