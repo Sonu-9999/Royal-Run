@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class levelgenerator : MonoBehaviour
 {
+    [SerializeField] cameracontroller cameracontrol;
     [SerializeField] GameObject chunkprefab;
     [SerializeField] int numberofchunks = 12;
     [SerializeField] Transform chunkparent;
-    [SerializeField] float chunkspeed = 5f;
+    [SerializeField] float chunkspeed = 7f;
+    [SerializeField] float minchunkspeed = 3f;
     //GameObject[] chunks = new GameObject[12];
     List<GameObject> chunks = new List<GameObject>();
     float chunkspace = 10f;
@@ -23,6 +25,17 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void Update()
     {
         movechunk();
+    }
+    public void changemovespeed(float speed)
+    {
+
+        chunkspeed += speed;
+        if (chunkspeed < minchunkspeed)
+        {
+            chunkspeed = minchunkspeed; //ensures the speed does not go below a minimum value
+        }
+        Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, Physics.gravity.z - speed); //changes the gravity to match the speed of the chunks
+        cameracontrol.ChangeCameraFOV(speed); //changes the camera FOV to match the speed of the chunks
     }
 
     private void spawnChunk(int i)  //spawns 12 chunks at the start

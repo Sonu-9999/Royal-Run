@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class apple : pickups
 {
+    levelgenerator lg;
+    void Start()
+    {
+        lg= FindFirstObjectByType<levelgenerator>();
+    }
     protected override void Onpickup()
     {
-        Debug.Log("power up!");
+        lg.changemovespeed(2f);
+        
     }
 }
