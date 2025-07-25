@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class apple : pickups
 {
-    levelgenerator lg;
-    void Start()
+    levelgenerator levelgen;
+    public void Init(levelgenerator levelgen)
     {
-        lg= FindFirstObjectByType<levelgenerator>();
+        this.levelgen = levelgen;
     }
     protected override void Onpickup()
     {
-        lg.changemovespeed(2f);
+        levelgen.changemovespeed(2f);
         
     }
 }

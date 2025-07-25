@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class coin : pickups
 {
+    scoreboard sc;
+    void Start()
+    {
+        sc= FindFirstObjectByType<scoreboard>();
+    }
     protected override void Onpickup()
     {
-        Debug.Log("Add 100 points");
+        sc.AddScore(100);
+        Destroy(gameObject);
     }
 }

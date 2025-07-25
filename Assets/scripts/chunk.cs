@@ -8,6 +8,7 @@ public class chunk : MonoBehaviour
     [SerializeField] GameObject coin;
     [SerializeField] float applespawnchance = 0.3f;
     [SerializeField] float coinsapwnchance = 0.5f;
+    levelgenerator levelgen;
 
     float[] fencelanes = { -1.8f, 1f, 3.7f };
     List<int> availablelanes = new List<int> { 0, 1, 2 };
@@ -19,6 +20,10 @@ public class chunk : MonoBehaviour
         SpawnApple();
         SpawnCoin();
 
+    }
+    public void Init(levelgenerator levelgen)
+    {
+        this.levelgen = levelgen;
     }
     void Spawnfence()
 
@@ -55,7 +60,8 @@ public class chunk : MonoBehaviour
         if (availablelanes.Count <= 0) return;
         int selectedlane = selectlane();
         Vector3 position = new Vector3(pickuplanes[selectedlane], transform.position.y, transform.position.z);
-        Instantiate(apple, position, Quaternion.identity, this.transform);
+        apple newapple = Instantiate(apple, position, Quaternion.identity, this.transform).GetComponent<apple>();// Instantiate the apple and get its component
+        newapple.Init(levelgen); // Initialize the apple with the level generator reference
     }
     void SpawnCoin()
     {
