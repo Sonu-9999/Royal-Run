@@ -304,7 +304,9 @@ PrefabInstance:
       value: checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5534401848865152724, guid: 0bd1deff867ff8840ad63d4817551f82, type: 3}
+    - {fileID: 2028049183939885078, guid: 0bd1deff867ff8840ad63d4817551f82, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6112047947633547329, guid: 0bd1deff867ff8840ad63d4817551f82, type: 3}
       insertIndex: -1

@@ -194,10 +194,6 @@ MonoBehaviour:
   coin: {fileID: 7284321983564954728, guid: 96a0850b1323d984986bf9786fab5d88, type: 3}
   applespawnchance: 0.3
   coinsapwnchance: 0.5
-  fencelanes:
-  - -2
-  - 0
-  - 5
 --- !u!1001 &22678676602252526
 PrefabInstance:
   m_ObjectHideFlags: 0
