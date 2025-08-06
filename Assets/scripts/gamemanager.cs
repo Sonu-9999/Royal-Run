@@ -6,7 +6,8 @@ public class gamemanager : MonoBehaviour
     [SerializeField] playercontroller controller;
     [SerializeField] TMP_Text timeText;
     [SerializeField] GameObject gameovertext;
-    [SerializeField] float startTime = 10f;
+    [SerializeField] float startTime = 12f;
+    [SerializeField] float timeincrese = 10f; //time to increase when player reaches checkpoint
     float timeleft;
     bool gameOver = false;
     // public bool GameOver{get { return gameOver; }}
@@ -33,5 +34,11 @@ public class gamemanager : MonoBehaviour
             gameovertext.SetActive(true);
             Time.timeScale = 0.1f;
         }
+    }
+    public void IncreaseTime()
+    {
+        if (gameOver) return;
+        timeleft += timeincrese;
+        timeText.text = timeleft.ToString("F1");
     }
 }
