@@ -299,6 +299,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8321008946804440311, guid: 0bd1deff867ff8840ad63d4817551f82, type: 3}
+      propertyPath: coinsapwnchance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321008946804440311, guid: 0bd1deff867ff8840ad63d4817551f82, type: 3}
+      propertyPath: applespawnchance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8918874326224934943, guid: 0bd1deff867ff8840ad63d4817551f82, type: 3}
       propertyPath: m_Name
       value: checkpoint
