@@ -1,6 +1,6 @@
-# Speed Chase
+# ROYAL RUN
 
-**Speed Chase** is a fast-paced arcade-style game where quick reflexes and smart decision-making are the key to survival.  
+**Royal Run** is a fast-paced arcade-style game where quick reflexes and smart decision-making are the key to survival.  
 Your mission: Collect coins, grab rare apples, dodge obstacles, and keep your speed high enough to make it to the next checkpoint before time runs out!
 
 ---
