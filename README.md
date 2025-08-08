@@ -26,4 +26,4 @@ Your mission: Collect coins, grab rare apples, dodge obstacles, and keep your sp
 ## 📦 Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/speed-chase.git
+   git clone https://github.com/Sonu-9999/Royal-Run.git
